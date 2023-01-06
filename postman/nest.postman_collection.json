@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "bf7cefd4-ee1f-452c-a3ae-5e91ceb6c5c2",
+		"name": "nest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14728810"
+	},
+	"item": [
+		{
+			"name": "deletarJogador",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/api/v1/jogadores?email=nbthales@gmail.com",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jogadores"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nbthales@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarTodosJogadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/api/v1/jogadores",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jogadores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarJogadorPeloEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/api/v1/jogadores?email=nbthales@gmail.com",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jogadores"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nbthales@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CriarAtualizarJogador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telefoneCelular\": \"+5535998683031\",\r\n    \"email\": \"nbthales@gmail.com\",\r\n    \"nome\": \"thales terra\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/v1/jogadores",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jogadores"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "endpoint",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
